@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+}
+
+/* HEADER */
+.md-header {
+  background: #9f7252;
+  color: white;
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.md-header h1 {
+  font-size: 50px;
+}
+.md-header p{
+    font-size: 25px;
+}
+
+.md-container {
+  max-width: 1200px;
+  width: 92%;
+  margin: 40px auto;
+}
+
+/* LEFT/RIGHT SECTIONS */
+.md-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 70px;
+}
+
+.md-row.left img { order: 1; }
+.md-row.left .md-text { order: 2; }
+
+.md-row.right img { order: 2; }
+.md-row.right .md-text { order: 1; }
+
+.md-img {
+  width: 60%;
+  border-radius: 30px;
+  height: 550px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+}
+
+.md-text {
+  width: 50%;
+}
+
+.md-text h2 {
+  color: #3e2514;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.md-text p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.md-text ul {
+  padding-left: 45px;
+  margin-top: 10px;
+  color: #555;
+  font-size: 20px;
+}
+
+/* CENTER CARD */
+.md-center {
+  text-align: center;
+  background: rgb(199, 172, 172);
+  padding: 40px;
+  border-radius: 20px;
+  margin: 50px 0;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+.md-center-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.md-center h2 {
+  color: #210738;
+  font-size: 40px;
+}
+.md-center p{
+    font-size: 23px;
+}
+.md-center ul{
+    font-size: 20px;
+     padding-left: 50px;
+ 
+  color: #2c2b2b;
+}
+/* BACK BUTTON */
+.md-back-wrapper {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.md-back-btn {
+  background: #070441;
+  color: white;
+  padding: 14px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+[data-animate].active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .md-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .md-img, .md-text {
+    width: 100%;
+  }
+
+  .md-img {
+    height: 260px;
+  }
+}
